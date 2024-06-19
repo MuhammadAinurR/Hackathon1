@@ -1,4 +1,4 @@
-let obat = [
+let dataObat = [
     {
         nama: "Paramex",
         harga: 4000,
@@ -36,6 +36,8 @@ let obat = [
 // function (namaObat, database) {
 
 // }
+
+// function('paramex', dataObat)
 
 // "nama": "Paramex",
 // "harga": "4000",
