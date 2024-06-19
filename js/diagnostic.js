@@ -1,4 +1,4 @@
-let obat = [
+let database = [
     {
         nama: "Paramex",
         harga: 4000,
@@ -38,6 +38,10 @@ let obat = [
 
 // return 
 
+// contoh
+// funciton(['flu', 'pilek', 'demam'], database);
+
+// Output
 // "nama": "Paramex",
 // "harga": "4000",
 // "stock": 28,
