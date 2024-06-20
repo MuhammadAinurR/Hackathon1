@@ -65,7 +65,7 @@ let dataObat = [
         nama: "Promag",
         harga: 4000,
         stock: 28,
-        gejala: [`sakit maag`, `GERD`, `perut kembung`],
+        gejala: [`sakit maag`, `gerd`, `perut kembung`],
         tokopediaLink: '',
         gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/881948_2-12-2021_16-26-6-1665834167.webp'
     },
@@ -105,7 +105,7 @@ let dataObat = [
         nama: "Aciblok",
         harga: 4000,
         stock: 28,
-        gejala: [`asam lambung`, `GERD`],
+        gejala: [`asam lambung`, `gerd`],
         tokopediaLink: '',
         gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/256029_17-1-2020_14-38-41-1665794049.jpeg'
     },

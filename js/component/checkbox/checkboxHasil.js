@@ -36,17 +36,6 @@ function listGejala(database){
         }
     }
     return objgejala
-
-    // let result = {};
-    // for (let i = 0; i < arrdgejala.length; i++){
-    //     for (let j = 0; j < arrdgejala[i].length; j++){
-    //         if (result[arrdgejala[i][j]] === undefined){
-    //             result[arrdgejala[i][j]] = [];
-    //         }
-    //         result[arrdgejala[i][j]]
-    //     }
-    // }
-    // return result
 }
 
 function outputUser(array, db) {

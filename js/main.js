@@ -17,5 +17,6 @@ function showMain() {
 function toko() {
     console.log('ke klik toko')
     document.getElementById('homepage').classList.add('hidden')
+    console.log(document.getElementById('toko').setAttribute("aria-current", "page"))
     
 }
