@@ -11,7 +11,7 @@ function generateCart(cartData) {
     cartData.forEach(item => {
         const productHTML = `
       <div class="flex items-center mt-3">
-        <img src="https://via.placeholder.com/80" alt="Product Image" class="mr-4">
+        <img src="${item.gambarLink}" alt="Product Image" class="mr-4 w-20">
         <div>
           <h2 class="font-bold">${item.nama}</h2>
           <p class="text-gray-700">Quantity: <input type="number" value="${item.buyQuantity}" class="w-16 text-center quantity-input" data-item-index="${cartData.indexOf(item)}"></p>

@@ -43,10 +43,11 @@ function createTokoItem(data) {
       // Add click event listener to "Add to Cart" button
       addToCartButton.addEventListener('click', () => {
         const newItem = {
+          gambarLink: item.gambarLink, // Initial quantity
           nama: item.nama,
           harga: item.harga,
           stock: item.stock, // Assuming you have a stock property
-          buyQuantity: 1, // Initial quantity
+          buyQuantity: 1,
         };
 
   
@@ -77,9 +78,9 @@ function createTokoItem(data) {
       container.appendChild(productElement);
     });
   }
-  
+  createTokoItem(dataObat)
   // Example usage: Assuming you have the dataObat array defined
-  createTokoItem(dataObat);
+  
   
   // Access and use cartData from localStorage (optional)
   // let cartData = JSON.parse(localStorage.getItem('cartData'));

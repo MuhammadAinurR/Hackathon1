@@ -63,6 +63,7 @@ const dbGejala = listGejala(dataObat);
 
 // Render Function  
 function checkBoxResult() {
+    console.log('ea')
     hideMain();
     let gejalaPenyakit = handleCheckboxChange()
     if (gejalaPenyakit.length < 1) {
@@ -74,8 +75,8 @@ function checkBoxResult() {
         katakata.id = 'notif-penyakit';
         katakata.innerText = 'Anda dapat menkonsumsi obat-obat berikut';
         (document.getElementById('notif-penyakit')) ? document.getElementById('notif-penyakit').innerText = 'Anda dapat menkonsumsi obat-obat berikut' : container.appendChild(katakata)
-        createSearchResult(outputUser(gejalaPenyakit, dbGejala));
-        showSearchResult()
+        showToko()
+        createTokoItem(outputUser(gejalaPenyakit, dbGejala))
     }
 
 }

@@ -13,7 +13,7 @@
 
 <body class="">
     <nav class="bg-gray-800">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="px-5">
             <div class="relative flex h-16 items-center justify-between">
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex flex-shrink-0 items-center">
@@ -78,7 +78,7 @@
     </nav>
 
     <main>
-        <div id="homepage" class="flex justify-center w-full pt-6 px-5 gap-5">
+        <div id="homepage" class="flex justify-center w-full pt-6 px-5 gap-5 hidden">
 
             <!-- Fitur Gejala -->
             <div class="border shadow rounded-lg w-1/2 mb-60">
@@ -114,16 +114,17 @@
         </div>
 
         <!-- Fitur Toko -->
-        <div id="toko-element" class="m-5 w-full hidden">
-            <div class="flex justify-between">
-                <h1 class="text-3xl font-bold mb-4 w-1/2">Store</h1>
-            
-                <div class=" w-1/3">
+        <div id="toko-element" class="m-5">
+            <div class="flex justify-between mb-3">
+                <h1 class="text-3xl font-bold w-1/2 mt-2">Store</h1>
+
+                <!-- Fitur Cari Barang -->
+                <div class="w-1/3">
                     <div class="Search-container">
                         <div class="Icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                                class="feather feather-search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-search">
                                 <circle cx="11" cy="11" r="8" />
                                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
                             </svg>
@@ -133,14 +134,8 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-
-
-            <!-- Fitur Cari Barang -->
-
-            <!-- Search Bar -->
-
-
 
             <div class="">
                 <div id="etalaseToko" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
@@ -187,7 +182,9 @@
     </chart>
 
 
-
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2024 Obatpedia. All rights reserved.</p>
+    </footer>
 
 
     <!-- External JavaScript for dynamic checkbox generation -->
@@ -201,8 +198,6 @@
     <script src="js/component/checkbox/checkboxHasil.js"></script>
     <script src="js/component/search/searchResult.js"></script>
 </body>
-<footer class="bg-gray-800 text-white py-4 text-center">
-    <p>&copy; 2024 Obatpedia. All rights reserved.</p>
-</footer>
+
 
 </html>

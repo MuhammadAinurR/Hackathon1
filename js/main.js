@@ -25,10 +25,16 @@ function showToko() {
     hideMain();
     hideSearchResult();
     hideCart();
+    createTokoItem(dataObat);
+    hideBarcode();
 }
 
 function showBarcode() {
     document.getElementById('barcode').classList.remove('hidden')
+}
+
+function hideBarcode() {
+    document.getElementById('barcode').classList.add('hidden')
 }
 
 // Hidden Function

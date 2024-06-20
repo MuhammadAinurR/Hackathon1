@@ -50,14 +50,17 @@ function createSearchResult(data) {
 }
 
 function search(ele) {
+
     if(event.key === 'Enter') {
         if (!ele.value) {
-            alert('Silakan masukkan sesuatu')
+            console.log('runnin')
+            showToko()
+            // alert('Silakan masukkan sesuatu');
         }
         if (Number(ele.value)) {
-            alert('Silakan masukkan input yang benar')
+            showToko()
+            // alert('Silakan masukkan input yang benar');
         }
-        createSearchResult(filterData(ele.value, dataObat));
-        document.getElementById('hasilSearch').classList.remove('hidden')        
+        createTokoItem(filterData(ele.value, dataObat));   
     } 
 }
