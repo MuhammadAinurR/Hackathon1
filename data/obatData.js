@@ -1,29 +1,29 @@
 // Data for checkboxes
-const checkboxData = [
-    { id: "batuk darah", label: "batuk darah"},
-    { id: "batuk kering", label: "batuk kering"},
-    { id: "cairan di paru-paru", label: "cairan di paru-paru"},
-    { id: "demam", label: "demam"},
-    { id: "diare", label: "diare"},
-    { id: "gangguan pernafasan akut", label: "gangguan pernafasan akut"},
-    { id: "lemas", label: "lemas" },
-    { id: "mual", label: "mual"},
-    { id: "ngilu", label: "ngilu" },
-    { id: "nyeri otot", label: "nyeri otot"},
-    { id: "nyeri saat menelan", label: "nyeri saat menelan"},
-    { id: "sesak nafas", label: "sesak nafas" },
-    { id: "sakit bagian abdonimal", label: "sakit bagian abdonimal"},
-    { id: "sakit tenggorokan", label: "sakit tenggorokan"},
-    { id: "sulit bernafas", label: "sulit bernafas"},
-    { id: "tidak enak badan", label: "tidak enak badan"},
-    { id: "tidak nafsu makan", label: "tidak nafsu makan"},
-    { id: "tidak nyaman di dada", label: "tidak nyaman di dada"},
+// const checkboxData = [
+//     { id: "batuk darah", label: "batuk darah"},
+//     { id: "batuk kering", label: "batuk kering"},
+//     { id: "cairan di paru-paru", label: "cairan di paru-paru"},
+//     { id: "demam", label: "demam"},
+//     { id: "diare", label: "diare"},
+//     { id: "gangguan pernafasan akut", label: "gangguan pernafasan akut"},
+//     { id: "lemas", label: "lemas" },
+//     { id: "mual", label: "mual"},
+//     { id: "ngilu", label: "ngilu" },
+//     { id: "nyeri otot", label: "nyeri otot"},
+//     { id: "nyeri saat menelan", label: "nyeri saat menelan"},
+//     { id: "sesak nafas", label: "sesak nafas" },
+//     { id: "sakit bagian abdonimal", label: "sakit bagian abdonimal"},
+//     { id: "sakit tenggorokan", label: "sakit tenggorokan"},
+//     { id: "sulit bernafas", label: "sulit bernafas"},
+//     { id: "tidak enak badan", label: "tidak enak badan"},
+//     { id: "tidak nafsu makan", label: "tidak nafsu makan"},
+//     { id: "tidak nyaman di dada", label: "tidak nyaman di dada"},
 
-];
+// ];
 
 const db_penyakit = {
     flu: [
-        "Sakit tenggorokan",
+        "sakit tenggorokan",
         "sulit bernafas",
         "demam",
         "tidak nyaman di dada",
