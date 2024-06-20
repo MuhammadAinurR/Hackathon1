@@ -12,7 +12,7 @@ function createSearchResult(data) {
     container.innerHTML = '';
     data.forEach(item => {
         const div1 = document.createElement("div");
-        div1.className = "w-1/5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700";
+        div1.className = "w-1/6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700";
 
         const a2 = document.createElement("a");
         a2.setAttribute("href", "#")
@@ -28,15 +28,15 @@ function createSearchResult(data) {
         a3.className = "block mb-2";
 
         const h54 = document.createElement("h5");
-        h54.className = "text-2xl font-bold tracking-tight text-gray-900 dark:text-white line-clamp-2"
+        h54.className = "text-md font-bold tracking-tight text-gray-900 dark:text-white line-clamp-2"
         h54.innerText = item.nama
 
         const div3 = document.createElement("div");
         div3.className = "flex items-center justify-between";
 
         const span4 = document.createElement("span");
-        span4.className = "text-2xl font-bold text-gray-900 dark:text-white"
-        span4.innerText = item.harga
+        span4.className = "text-md font-bold text-gray-900 dark:text-white"
+        span4.innerText = `Rp. ${item.harga}`
 
         const a4 = document.createElement("a");
         a4.className = ""

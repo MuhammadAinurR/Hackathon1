@@ -24,18 +24,69 @@ function checkPenyakit(gejalaUser, db) {
 }
 
 
-// Render Function
+function listGejala(database){
+    let objgejala = {};
+    for (let i = 0; i < database.length; i++){
+        let perobatgejala = database[i].gejala;
+        for (let j = 0; j < perobatgejala.length; j++){
+            if (objgejala[perobatgejala[j]] === undefined){
+                objgejala[perobatgejala[j]] = [];
+            }
+            objgejala[perobatgejala[j]].push(database[i])
+        }
+    }
+    return objgejala
+
+    // let result = {};
+    // for (let i = 0; i < arrdgejala.length; i++){
+    //     for (let j = 0; j < arrdgejala[i].length; j++){
+    //         if (result[arrdgejala[i][j]] === undefined){
+    //             result[arrdgejala[i][j]] = [];
+    //         }
+    //         result[arrdgejala[i][j]]
+    //     }
+    // }
+    // return result
+}
+
+function outputUser(array, db) {
+    const result = [];
+    const addedItems = new Set(); // Set to keep track of added items
+    
+    for (penyakit in db) {
+        for (usergejala of array) {
+            if (usergejala === penyakit) {
+                // Iterate through items in db[penyakit]
+                for (const item of db[penyakit]) {
+                    if (!addedItems.has(item)) {
+                        result.push(item);
+                        addedItems.add(item); // Add item to Set
+                    }
+                }
+            }
+        }
+    }
+    
+    return result;
+}
+
+const dbGejala = listGejala(dataObat);
+
+// Render Function  
 function checkBoxResult() {
     hideMain();
-    handleCheckboxChange();
-    const container = document.getElementById("hasilCheckbox");
     let gejalaPenyakit = handleCheckboxChange()
-    const katakata = document.createElement("p");
-    katakata.id = 'notif-penyakit';
-    
-    let result = checkPenyakit(gejalaPenyakit, db_penyakit) === 'ambigu' ? 'gejala terlalu ambigu, silakan pilih gejala lebih lengkap':`Anda terindikasi terjangkit ${checkPenyakit(gejalaPenyakit, db_penyakit)}, kami sarankan untuk konsumsi obat berikut`;
-    katakata.innerText = result;
-    (document.getElementById('notif-penyakit')) ? document.getElementById('notif-penyakit').innerText = result : container.appendChild(katakata)
-    createSearchResult(filterData(checkPenyakit(gejalaPenyakit, db_penyakit), dataObat));
-    showSearchResult()
+    if (gejalaPenyakit.length < 1) {
+        alert('masukkan gejala terlebih dahulu')
+        showMain()
+    } else {
+        const container = document.getElementById("hasilCheckbox");
+        const katakata = document.createElement("p");
+        katakata.id = 'notif-penyakit';
+        katakata.innerText = 'Anda dapat menkonsumsi obat-obat berikut';
+        (document.getElementById('notif-penyakit')) ? document.getElementById('notif-penyakit').innerText = 'Anda dapat menkonsumsi obat-obat berikut' : container.appendChild(katakata)
+        createSearchResult(outputUser(gejalaPenyakit, dbGejala));
+        showSearchResult()
+    }
+
 }

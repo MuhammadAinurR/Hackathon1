@@ -26,15 +26,13 @@ function createCheckboxes(data) {
     });
 }
 
-
-
 function getFormData(data) {
     const idSet = new Set();
     const result = [];
 
-    for (let disease in data) {
-        data[disease].forEach(symptom => {
-            const id = symptom; // Assuming symptom is a string (based on your current implementation)
+    data.forEach(obat => {
+        obat.gejala.forEach(symptom => {
+            const id = symptom.toLowerCase(); // Convert to lowercase to handle case sensitivity
             
             // Check if id is not already in the Set
             if (!idSet.has(id)) {
@@ -42,7 +40,7 @@ function getFormData(data) {
                 result.push({ id: id, label: symptom });
             }
         });
-    }
+    });
 
     result.sort((a, b) => {
         if (a.id < b.id) return -1;
@@ -54,7 +52,7 @@ function getFormData(data) {
 }
 
 // prepare data for pilih gejala display
-const checkboxData = getFormData(db_penyakit);
+const checkboxData = getFormData(dataObat);
 
 // Call function to create checkboxes when the page loads
 document.addEventListener("DOMContentLoaded", createCheckboxes(checkboxData));
