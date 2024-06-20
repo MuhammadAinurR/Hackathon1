@@ -3,6 +3,7 @@ function showMain() {
     hideToko();
     hideCart();
     hideLandingPage();
+    hideNavbar()
 }
 
 function showLandingPage() {
@@ -10,6 +11,7 @@ function showLandingPage() {
     hideToko();
     hideCart();
     hideMain();
+    showNavbar()
 }
 
 function showCart() {
@@ -18,6 +20,7 @@ function showCart() {
     hideMain();
     hideToko();
     hideLandingPage();
+    showNavbar();
 }
 
 function showToko() {
@@ -27,6 +30,7 @@ function showToko() {
     createTokoItem(dataObat);
     hideBarcode();
     hideLandingPage();
+    hideNavbar();
 }
 
 let isAnotherBarcode = true;
@@ -44,13 +48,22 @@ function showBarcode() {
     hideLandingPage();
 }
 
+function showNavbar() {
+    document.getElementById('navbar').classList.remove('hidden')
+}
+
+// Hidden Function
+
+
 function hideBarcode() {
     document.getElementById('barcode').classList.add('hidden')
     document.getElementById('barcode2').classList.add('hidden')
     hideLandingPage();
 }
 
-// Hidden Function
+function hideNavbar() {
+    document.getElementById('navbar').classList.add('hidden')
+}
 
 function hideLandingPage() {
     document.getElementById('landing-page').classList.add('hidden')
