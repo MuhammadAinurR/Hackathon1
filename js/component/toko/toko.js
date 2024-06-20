@@ -25,8 +25,13 @@ function createTokoItem(data) {
       const productName = document.createElement('h5');
       productName.className = 'text-md font-bold tracking-tight text-gray-900 dark:text-white line-clamp-2';
       productName.innerText = item.nama;
-  
+
+      const productDescription = document.createElement('h5');
+      productDescription.className = 'text-sm tracking-tight text-gray-500 dark:text-white line-clamp-2 opacity-75';
+      productDescription.innerText = item.deskripsi;
+      
       productNameLink.appendChild(productName);
+      productNameLink.appendChild(productDescription)
   
       // Create price and add to cart section
       const productDetails = document.createElement('div');

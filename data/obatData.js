@@ -17,6 +17,7 @@ let dataObat = [
         nama: "Paramex",
         harga: 4000,
         stock: 2,
+        deskripsi: 'sakit kepala',
         gejala: [`sakit kepala`, `sakit gigi`],
         tokopediaLink: ``,
         gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/9490-1665779892.jpeg'
@@ -27,7 +28,8 @@ let dataObat = [
         stock: 28,
         gejala: [`demam`, `sakit kepala`, `hidung tersumbat`, `batuk kering`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/9963-1665780348.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/9963-1665780348.webp',
+        deskripsi: 'flu & batuk kering',
     },
     {
         nama: "Paramex Nyeri Otot",
@@ -35,7 +37,8 @@ let dataObat = [
         stock: 28,
         gejala: [`nyeri otot`, `nyeri sendi`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/72337_18-6-2020_14-4-37-1665782199.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/72337_18-6-2020_14-4-37-1665782199.webp',
+        deskripsi: 'nyeri otot',
     },
     {
         nama: "Panadol Biru",
@@ -43,7 +46,8 @@ let dataObat = [
         stock: 28,
         gejala: [`sakit kepala`, `sakit gigi`, `nyeri otot`, `demam`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/222822_24-8-2022_11-38-12-1665760972.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/222822_24-8-2022_11-38-12-1665760972.webp',
+        deskripsi: 'demam & sakit kepala',
     },
     {
         nama: "Panadol Hijau-Merah",
@@ -51,7 +55,8 @@ let dataObat = [
         stock: 28,
         gejala: [`demam`, `sakit kepala`, `hidung tersumbat`, `bersin-bersin`, `batuk kering`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/729801_22-11-2021_14-10-58-1665791638.png'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/729801_22-11-2021_14-10-58-1665791638.png',
+        deskripsi: 'demam & batuk kering',
     },
     {
         nama: "Mylanta",
@@ -59,15 +64,17 @@ let dataObat = [
         stock: 28,
         gejala: [`sakit maag`, `asam lambung`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/854811_29-5-2022_21-2-6-1665780051.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/854811_29-5-2022_21-2-6-1665780051.webp',
+        deskripsi: 'maag & asam lambung',
     },
     {
-        nama: "Promag",
+        nama: "Promaag",
         harga: 4000,
         stock: 28,
         gejala: [`sakit maag`, `gerd`, `perut kembung`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/881948_2-12-2021_16-26-6-1665834167.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/881948_2-12-2021_16-26-6-1665834167.webp',
+        deskripsi: 'maag',
     },
     {
         nama: "Actifed",
@@ -75,7 +82,8 @@ let dataObat = [
         stock: 28,
         gejala: [`pilek`, `bersin-bersin`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/2468_22-1-2024_17-18-11.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/2468_22-1-2024_17-18-11.webp',
+        deskripsi: 'pilek & bersin',
     },
     {
         nama: "Actifed Plus Expectorant",
@@ -83,7 +91,8 @@ let dataObat = [
         stock: 28,
         gejala: ['pilek', 'batuk berdahak'],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/725469_1-3-2024_9-51-53.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/725469_1-3-2024_9-51-53.webp',
+        deskripsi: 'pilek & batuk berdahak',
     },
     {
         nama: "Neo Rheumacyl",
@@ -91,15 +100,26 @@ let dataObat = [
         stock: 28,
         gejala: ['nyeri otot', 'nyeri sendi'],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/11449-1665782058.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/11449-1665782058.webp',
+        deskripsi: 'nyeri otot & sendi',
     },
     {
-        nama: "Tolak Angin Cair",
+        nama: "Tolak Angin Cair BOX (12pcs)",
+        harga: 20000,
+        stock: 28,
+        gejala: [`perut kembung`, `mual`, `bersin-bersin`],
+        tokopediaLink: '',
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/49874_26-4-2021_8-26-37-1665791637.webp',
+        deskripsi: 'kembung & mual',
+    },
+    {
+        nama: "Tolak Angin Cair 1 pcs",
         harga: 4000,
         stock: 28,
         gejala: [`perut kembung`, `mual`, `bersin-bersin`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/49874_26-4-2021_8-26-37-1665791637.webp'
+        gambarLink: 'https://img.lazcdn.com/g/p/1e993961b3af1a500242db0109309f7b.png_720x720q80.png',
+        deskripsi: 'kembung & mual',
     },
     {
         nama: "Aciblok",
@@ -107,7 +127,8 @@ let dataObat = [
         stock: 28,
         gejala: [`asam lambung`, `gerd`],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/256029_17-1-2020_14-38-41-1665794049.jpeg'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/256029_17-1-2020_14-38-41-1665794049.jpeg',
+        deskripsi: 'asam lambung & gerd',
     },
     {
         nama: "Antimo Herbal",
@@ -115,7 +136,8 @@ let dataObat = [
         stock: 28,
         gejala: [`perut kembung`, `mual`],
         tokopediaLink: '',
-        gambarLink: 'https://images.tokopedia.net/img/cache/700/hDjmkQ/2021/12/30/961c13a8-8fa6-479e-bada-5d433b6ba5ce.jpg'
+        gambarLink: 'https://images.tokopedia.net/img/cache/700/hDjmkQ/2021/12/30/961c13a8-8fa6-479e-bada-5d433b6ba5ce.jpg',
+        deskripsi: 'kembung & mual',
     },
     {
         nama: "Bisolvon Extra",
@@ -123,6 +145,7 @@ let dataObat = [
         stock: 28,
         gejala: ['batuk berdahak'],
         tokopediaLink: '',
-        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/329457_16-6-2020_10-7-14-1665779176.webp'
+        gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/329457_16-6-2020_10-7-14-1665779176.webp',
+        deskripsi: 'batuk berdahak',
     },
 ]
