@@ -13,3 +13,9 @@ function showMain() {
     document.getElementById('hasilGejala').classList.add('hidden')
     document.getElementById('hasilSearch').classList.add('hidden')
 }
+
+function toko() {
+    console.log('ke klik toko')
+    document.getElementById('homepage').classList.add('hidden')
+    
+}
