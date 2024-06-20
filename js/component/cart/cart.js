@@ -10,18 +10,17 @@ function generateCart(cartData) {
 
     cartData.forEach(item => {
         const productHTML = `
-      <div class="flex items-center mt-3">
-        <img src="${item.gambarLink}" alt="Product Image" class="mr-4 w-20">
-        <div>
-          <h2 class="font-bold">${item.nama}</h2>
-          <p class="text-gray-700">Quantity: <input type="number" value="${item.buyQuantity}" class="w-16 text-center quantity-input" data-item-index="${cartData.indexOf(item)}"></p>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <button class="text-red-500 hover:text-red-700"><i class="fas fa-trash"></i></button>
-        <div class="mx-4">
+      <div class= "flex">
+        <div class="flex items-center mt-3 w-1/2">
+          <img src="${item.gambarLink}" alt="Product Image" class="mr-4 w-20">
+          <div>
+            <h2 class="font-bold">${item.nama}</h2>
+            <p class="text-gray-700">Quantity: <input type="number" value="${item.buyQuantity}" class="w-16 text-center quantity-input" data-item-index="${cartData.indexOf(item)}"></p>
           </div>
-        <span class="font-bold">Rp ${item.harga.toFixed(2)}</span>
+        </div>
+        <div class="flex justify-end w-1/2">
+          <span class="font-bold place-content-center">Rp ${item.harga} / unit</span>
+        </div>
       </div>
     `;
 

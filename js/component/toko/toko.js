@@ -1,12 +1,18 @@
 let cartData = [];
 
+function resetCart() {
+  cartData = [];
+  console.log('cart Reset');
+  showCart();
+}
+
 function createTokoItem(data) {
     const container = document.getElementById('etalaseToko');
     container.innerHTML = ''; // Clear existing content
   
     data.forEach(item => {
       const productElement = document.createElement('div');
-      productElement.className = 'w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700';
+      productElement.className = 'hover:shadow-xl w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700';
   
       // Create product image
       const productImage = document.createElement('img');
@@ -42,7 +48,7 @@ function createTokoItem(data) {
       productPrice.innerText = `Rp. ${item.harga}`;
   
       const addToCartButton = document.createElement('button');
-      addToCartButton.className = '';
+      addToCartButton.className = 'bg-gray-100  hover:bg-gray-700 hover:text-white rounded-lg p-3';
       addToCartButton.innerText = 'Add to Cart';
   
       // Add click event listener to "Add to Cart" button

@@ -25,7 +25,7 @@
     width: 100%;
     border: 2px solid #e0e0e0;
     border-radius: 4px;
-    padding: 8px;
+    padding: 2px;
     transition: border-color 0.3s;
 }
 
@@ -45,7 +45,9 @@
     width: 100%;
     border: none;
     outline: none;
-    padding: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
     font-size: 1em;
     color: #333;
 }

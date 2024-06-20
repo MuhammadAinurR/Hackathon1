@@ -1,6 +1,5 @@
 function showMain() {
     document.getElementById('homepage').classList.remove('hidden');
-    hideSearchResult();
     hideToko();
     hideCart();
     hideLandingPage();
@@ -8,18 +7,9 @@ function showMain() {
 
 function showLandingPage() {
     document.getElementById('landing-page').classList.remove('hidden');
-    hideSearchResult();
     hideToko();
     hideCart();
     hideMain();
-}
-
-function showSearchResult() {
-    document.getElementById('search-element').classList.remove('hidden');
-    hideMain();
-    hideToko();
-    hideCart();
-    hideLandingPage();
 }
 
 function showCart() {
@@ -27,27 +17,36 @@ function showCart() {
     document.getElementById('chart-element').classList.remove('hidden')
     hideMain();
     hideToko();
-    hideSearchResult();
     hideLandingPage();
 }
 
 function showToko() {
     document.getElementById('toko-element').classList.remove('hidden');
     hideMain();
-    hideSearchResult();
     hideCart();
     createTokoItem(dataObat);
     hideBarcode();
     hideLandingPage();
 }
 
+let isAnotherBarcode = true;
+
 function showBarcode() {
-    document.getElementById('barcode').classList.remove('hidden')
+    if (isAnotherBarcode) {
+        document.getElementById('barcode2').classList.add('hidden')
+        document.getElementById('barcode').classList.remove('hidden');
+        isAnotherBarcode = false;
+    } else {
+        document.getElementById('barcode').classList.add('hidden')
+        document.getElementById('barcode2').classList.remove('hidden');
+        isAnotherBarcode = true;
+    }
     hideLandingPage();
 }
 
 function hideBarcode() {
     document.getElementById('barcode').classList.add('hidden')
+    document.getElementById('barcode2').classList.add('hidden')
     hideLandingPage();
 }
 
@@ -61,9 +60,6 @@ function hideMain() {
     document.getElementById('homepage').classList.add('hidden')
 }
 
-function hideSearchResult() {
-    document.getElementById('search-element').classList.add('hidden')
-}
 
 function hideToko() {
     document.getElementById('toko-element').classList.add('hidden')
