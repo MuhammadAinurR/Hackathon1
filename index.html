@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="">
     <nav class="bg-gray-800">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
@@ -23,11 +23,12 @@
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="#" onclick="showMain()"
-                                class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
+                            <a href="#" onclick="showMain(), hideToko()"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
                             <a href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang Kami</a>
-                            <a id="toko" onclick="toko()" href="#"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang
+                                Kami</a>
+                            <a id="toko" onclick="showToko()" href="#"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Toko</a>
                             <a href="#"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
@@ -35,11 +36,13 @@
                     </div>
                 </div>
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <button onclick="showCart()" type="button"
+                        class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span class="absolute -inset-1.5"></span>
                         <span class="sr-only">View cart</span>
-                        <img width="30" height="48" src="https://img.icons8.com/deco-color/48/shopping-cart.png" alt="shopping-cart"/>
-                      </button>
+                        <img width="30" height="48" src="https://img.icons8.com/deco-color/48/shopping-cart.png"
+                            alt="shopping-cart" />
+                    </button>
 
                     <!-- Profile dropdown -->
                     <div class="relative ml-3">
@@ -55,7 +58,8 @@
                             </button>
                         </div>
 
-                        <div id="menu-button" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        <div id="menu-button"
+                            class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                             <!-- Active: "bg-gray-100", Not Active: "" -->
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
@@ -73,13 +77,13 @@
 
     </nav>
 
-    <main style="margin-bottom: 200px;">
+    <main>
         <div id="homepage" class="flex justify-center w-full pt-6 px-5 gap-5">
 
             <!-- Fitur Gejala -->
-            <div class="border shadow rounded-lg w-1/2">
+            <div class="border shadow rounded-lg w-1/2 mb-60">
                 <div class="">
-                    <p class="text-center px-3 py-3 rounded-md">Pilih Gejala</p>
+                    <h1 class="text-3xl font-bold mb-4 text-center mt-4">Pilih Gejala</h1>
                 </div>
 
                 <div class="mx-5">
@@ -89,33 +93,7 @@
                 </div>
 
                 <div class="flex justify-end">
-                    <button class="mr-4 mb-2"
-                        onclick="checkBoxResult()">submit</button>
-                </div>
-            </div>
-
-            <!-- Fitur Cari Barang -->
-            <div class="border shadow rounded-lg w-1/2 flex justify-center hidden">
-                <!-- Search Bar -->
-                <div class="place-content-center">
-                    <div class="Card border">
-                        <div class="CardInner">
-                            <label class="Search-label" style="color: black;">Search to your Medicine</label>
-                            <div class="Search-container">
-                                <div class="Icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-search">
-                                        <circle cx="11" cy="11" r="8" />
-                                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                                    </svg>
-                                </div>
-                                <div class="SearchInputContainer">
-                                    <input class="SearchInput" placeholder="bodrex?" onkeydown="search(this)" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="mr-4 mb-2" onclick="checkBoxResult()">submit</button>
                 </div>
             </div>
         </div>
@@ -128,20 +106,103 @@
         </div>
 
         <!-- Fitur Penampilan hasil dari search -->
-        <div id="hasilSearch" class="flex justify-center w-full pt-6 px-5 gap-5 hidden"> 
-            <!-- Search Result will generated Here -->
+        <div id="search-element" class="m-5 hidden">
+            <h1 class="text-3xl font-bold mb-4">Kami sarankan untuk mengkonsumsi</h1>
+            <div id="hasilSearch" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+                <!-- Search Result will generated Here -->
+            </div>
         </div>
 
+        <!-- Fitur Toko -->
+        <div id="toko-element" class="m-5 w-full hidden">
+            <div class="flex justify-between">
+                <h1 class="text-3xl font-bold mb-4 w-1/2">Store</h1>
+            
+                <div class=" w-1/3">
+                    <div class="Search-container">
+                        <div class="Icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-search">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                        </div>
+                        <div class="SearchInputContainer">
+                            <input class="SearchInput" placeholder="bodrex?" onkeydown="search(this)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Fitur Cari Barang -->
+
+            <!-- Search Bar -->
+
+
+
+            <div class="">
+                <div id="etalaseToko" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+
+                </div>
+            </div>
+
+        </div>
     </main>
 
+    <chart id="chart-element" class="hidden">
+        <div class="flex justify-center items-center min-h-screen gap-5">
+            <div class="w-1/3 shadow-lg">
+                <div class="bg-gray-100 rounded-lg shadow-lg p-5">
+                    <h1 class="text-2xl font-bold mb-6">Shopping Cart</h1>
+                    <div class="flex justify-between mb-4">
+                        <div id="cart-generator">
+
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">Total:</span>
+                        <span id="total-harga" class="font-bold"></span>
+                    </div>
+                    <div class="flex justify-center mt-6">
+                        <button id="checkout-Button"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Checkout</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="barcode" class="w-auto px-3 py-3 border shadow-lg hidden">
+                <h1 class="text-2xl font-bold mb-6 text-center">Barcode Pembayaran</h1>
+                <img src="https://www.drupal.org/files/project-images/drupal-project-barcodes.png" alt="">
+            </div>
+
+
+        </div>
+
+        <div class="w-1/2">
+
+        </div>
+    </chart>
+
+
+
+
+
     <!-- External JavaScript for dynamic checkbox generation -->
-    <script src="./data/obatData.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/component/cart/cart.js"></script>
+    <script src="./data/obatData.js"></script>
+    <script src="js/component/toko/toko.js"></script>
     <script src="js/component/search/search.js"></script>
     <script src="js/component/navbar/navbar.js"></script>
     <script src="js/component/checkbox/checkbox.js"></script>
     <script src="js/component/checkbox/checkboxHasil.js"></script>
     <script src="js/component/search/searchResult.js"></script>
 </body>
+<footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2024 Obatpedia. All rights reserved.</p>
+</footer>
 
 </html>

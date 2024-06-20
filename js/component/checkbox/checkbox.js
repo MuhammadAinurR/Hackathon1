@@ -79,4 +79,4 @@ function handleCheckboxChange() {
 }
 
 // Attach event listener to handle checkbox changes
-document.addEventListener("change", handleCheckboxChange); 
+// document.addEventListener("change", handleCheckboxChange); 

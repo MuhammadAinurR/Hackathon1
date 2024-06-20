@@ -1,22 +1,51 @@
-function hideMain() {
-    // should add class hidden
-    document.getElementById('homepage').classList.add('hidden')
-    document.getElementById('hasilGejala').classList.remove('hidden')
+function showMain() {
+    document.getElementById('homepage').classList.remove('hidden');
+    hideSearchResult();
+    hideToko();
+    hideCart();
 }
 
 function showSearchResult() {
-    document.getElementById('hasilSearch').classList.remove('hidden')
+    document.getElementById('search-element').classList.remove('hidden');
+    hideMain();
+    hideToko();
+    hideCart();
 }
 
-function showMain() {
-    document.getElementById('homepage').classList.remove('hidden')
-    document.getElementById('hasilGejala').classList.add('hidden')
-    document.getElementById('hasilSearch').classList.add('hidden')
+function showCart() {
+    generateCart(cartData)
+    document.getElementById('chart-element').classList.remove('hidden')
+    hideMain();
+    hideToko();
+    hideSearchResult();
 }
 
-function toko() {
-    console.log('ke klik toko')
+function showToko() {
+    document.getElementById('toko-element').classList.remove('hidden');
+    hideMain();
+    hideSearchResult();
+    hideCart();
+}
+
+function showBarcode() {
+    document.getElementById('barcode').classList.remove('hidden')
+}
+
+// Hidden Function
+
+function hideMain() {
     document.getElementById('homepage').classList.add('hidden')
-    console.log(document.getElementById('toko').setAttribute("aria-current", "page"))
-    
 }
+
+function hideSearchResult() {
+    document.getElementById('search-element').classList.add('hidden')
+}
+
+function hideToko() {
+    document.getElementById('toko-element').classList.add('hidden')
+}
+
+function hideCart() {
+    document.getElementById('chart-element').classList.add('hidden')
+}
+

@@ -16,7 +16,7 @@ let dataObat = [
     {
         nama: "Paramex",
         harga: 4000,
-        stock: 28,
+        stock: 2,
         gejala: [`sakit kepala`, `sakit gigi`],
         tokopediaLink: ``,
         gambarLink: 'https://d2qjkwm11akmwu.cloudfront.net/products/9490-1665779892.jpeg'

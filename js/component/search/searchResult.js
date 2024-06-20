@@ -1,18 +1,9 @@
 function createSearchResult(data) {
-    if (data.length === 0) {
-        // alert('Keyword tidak ditemukan')
-        let inputs = document.getElementsByClassName('SearchInput');
-        // Loop through each input element (if there are multiple with the same class)
-        for (var i = 0; i < inputs.length; i++) {
-            // Clear the value of each input element
-            inputs[i].value = "";
-        }
-    }
     let container = document.getElementById('hasilSearch')
     container.innerHTML = '';
     data.forEach(item => {
         const div1 = document.createElement("div");
-        div1.className = "w-1/6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700";
+        div1.className = "w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700";
 
         const a2 = document.createElement("a");
         a2.setAttribute("href", "#")
