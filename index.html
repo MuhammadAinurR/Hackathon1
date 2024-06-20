@@ -23,9 +23,9 @@
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="#" onclick="showMain(), hideToko()"
+                            <a href="#" onclick="showLandingPage()"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
-                            <a href="#"
+                            <a href="#tentang-kami"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang
                                 Kami</a>
                             <a id="toko" onclick="showToko()" href="#"
@@ -77,6 +77,135 @@
 
     </nav>
 
+    <div id="landing-page">
+        <hero>
+            <div class="bg-gray-100">
+                <section class="cover bg-blue-teal-gradient relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 overflow-hidden py-48 flex
+                items-center min-h-screen">
+                    <div class="w-full absolute top-0 left-0 z-0">
+                        <img src="https://cdn.discordapp.com/attachments/1252869579831771167/1253322064811659274/accurate.png?ex=66756ea1&is=66741d21&hm=dbe5ceef091289553b223750ea255c91b98b265db67638715d8606d78f405b6d&" alt="" class="w-full h-full object-cover opacity-20">
+                    </div>
+
+                    <div class="lg:w-3/4 xl:w-2/4 relative z-10 h-100 lg:mt-16">
+                        <div>
+                            <h1 class="text-white text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">Hidup yang
+                                baik dimulai dari merawat diri kita sendiri</h1>
+                            <p class="text-blue-100 text-xl md:text-2xl leading-snug mt-4">Selamat datang di Obatpedia,
+                                kami ada untuk keselamatan kita bersama.</p>
+                            <a onclick="showMain(), hideToko()" href="#"
+                                class="px-8 py-4 bg-teal-500 text-white rounded inline-block mt-8 font-semibold">Ada keluhan kesehatan?</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </hero>
+
+        <about>
+            <!-- start about -->
+            <section class="relative px-4 py-16 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 lg:py-32">
+                <div class="flex flex-col lg:flex-row lg:-mx-8">
+                    <div class="w-full lg:w-1/2 lg:px-8">
+                        <h2 class="text-3xl leading-tight font-bold mt-4">Selamat datang di Obatpedia</h2>
+                        <p class="text-lg mt-4 font-semibold">Terpercaya atas penjualan obat di seluruh Indonesia</p>
+                        <p class="mt-2 leading-relaxed">Dengan adanya kepedulian terhadap kesehatan maka kita sudah
+                            peduli dengan orang sekitar kita juga, karna kesehatan ialah awal dari segalanya</p>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 lg:px-8 mt-12 lg:mt-0">
+                        <div class="md:flex">
+                            <div>
+                                <div class="w-16 h-16 bg-blue-600 rounded-full"></div>
+                            </div>
+                            <div class="md:ml-8 mt-4 md:mt-0">
+                                <h4 class="text-xl font-bold leading-tight">Cepat dan Terpercaya</h4>
+                                <p class="mt-2 leading-relaxed">Kita selalu cepat menjadi yang tercepat dan dapat
+                                    diandalkan</p>
+                            </div>
+                        </div>
+
+                        <div class="md:flex mt-8">
+                            <div>
+                                <div class="w-16 h-16 bg-blue-600 rounded-full"></div>
+                            </div>
+                            <div class="md:ml-8 mt-4 md:mt-0">
+                                <h4 class="text-xl font-bold leading-tight">Tersebar di seluruh Indonesia</h4>
+                                <p class="mt-2 leading-relaxed">Kami pecaya bahwa siapapun berhak mendapatkan kesehatan
+                                    dan pelayanan yang sama</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:flex md:flex-wrap mt-24 text-center md:-mx-4 justify-center gap-5">
+                    <div class="w-1/3">
+                        <div class="bg-white rounded-lg border border-gray-300 p-8">
+                            <img src="images/teeth-whitening.svg" alt="" class="h-20 mx-auto">
+
+                            <h4 class="text-xl font-bold mt-4">Diagnosis yang dapat diandalkan</h4>
+                            <p class="mt-1">Let us show you how our experience.</p>
+                            <a onclick="showMain(), hideToko()" href="#" class="block mt-4">Coba Sekarang</a>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3">
+                        <div class="bg-white rounded-lg border border-gray-300 p-8">
+                            <img src="images/oral-surgery.svg" alt="" class="h-20 mx-auto">
+
+                            <h4 class="text-xl font-bold mt-4">Toko Obat Terlengkap</h4>
+                            <p class="mt-1">Let us show you how our experience.</p>
+                            <a onclick="showToko()" href="#" class="block mt-4">Coba Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- <div class="md:w-1/2 md:px-4 mt-4 md:mt-8 lg:mt-0 lg:w-1/4">
+                <div class="bg-white rounded-lg border border-gray-300 p-8">
+                  <img src="images/painless-dentistry.svg" alt="" class="h-20 mx-auto">
+      
+                  <h4 class="text-xl font-bold mt-4">Painless Dentistry</h4>
+                  <p class="mt-1">Let us show you how our experience.</p>
+                  <a href="#" class="block mt-4">Read More</a>
+                </div>
+              </div>
+      
+              <div class="md:w-1/2 md:px-4 mt-4 md:mt-8 lg:mt-0 lg:w-1/4">
+                <div class="bg-white rounded-lg border border-gray-300 p-8">
+                  <img src="images/periodontics.svg" alt="" class="h-20 mx-auto">
+      
+                  <h4 class="text-xl font-bold mt-4">Periodontics</h4>
+                  <p class="mt-1">Let us show you how our experience.</p>
+                  <a href="#" class="block mt-4">Read More</a>
+                </div>
+              </div> -->
+                </div>
+            </section>
+            <!-- end about -->
+        </about>
+
+        <!-- start testimonials -->
+        <section class="relative bg-gray-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-16 lg:py-32">
+            <div id="tentang-kami" class="flex flex-col lg:flex-row lg:-mx-8">
+                <div class="w-full lg:w-1/2 lg:px-8">
+                    <h2 class="text-3xl leading-tight font-bold mt-4">Kenapa harus Obatpedia?</h2>
+                    <p class="mt-2 leading-relaxed">Obatpedia merupakan pusat pelayanan distribusi obat paling
+                        terpercaya dan terlengkap di seluruh indonesia, kami sudah lebih dari 500tahun melayani negri
+                        ini dan berkomitmen terus membangun nengri ini</p>
+                </div>
+
+                <div class="w-full md:max-w-md md:mx-auto lg:w-1/2 lg:px-8 mt-12 mt:md-0">
+                    <div class="bg-gray-400 w-full h-72 rounded-lg">
+                        <img class="w-full"
+                            src="https://cdn.discordapp.com/attachments/1252869579831771167/1253323852222697498/delivery-man-red-uniform-giving-box-package-customer-isolated-orange-wall.jpg?ex=6675704c&is=66741ecc&hm=e9126a0b2afa3e03676aed33ba76c92393c96bcf86672f5803345108a0fb1e05&"
+                            alt="">
+                    </div>
+
+                    <p class="italic text-sm mt-2 text-center">Dari kita untuk kita</p>
+                </div>
+            </div>
+        </section>
+        <!-- end testimonials -->
+    </div>
+
+
     <main>
         <div id="homepage" class="flex justify-center w-full pt-6 px-5 gap-5 hidden">
 
@@ -114,7 +243,7 @@
         </div>
 
         <!-- Fitur Toko -->
-        <div id="toko-element" class="m-5">
+        <div id="toko-element" class="m-5 hidden">
             <div class="flex justify-between mb-3">
                 <h1 class="text-3xl font-bold w-1/2 mt-2">Store</h1>
 

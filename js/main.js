@@ -3,6 +3,15 @@ function showMain() {
     hideSearchResult();
     hideToko();
     hideCart();
+    hideLandingPage();
+}
+
+function showLandingPage() {
+    document.getElementById('landing-page').classList.remove('hidden');
+    hideSearchResult();
+    hideToko();
+    hideCart();
+    hideMain();
 }
 
 function showSearchResult() {
@@ -10,6 +19,7 @@ function showSearchResult() {
     hideMain();
     hideToko();
     hideCart();
+    hideLandingPage();
 }
 
 function showCart() {
@@ -18,6 +28,7 @@ function showCart() {
     hideMain();
     hideToko();
     hideSearchResult();
+    hideLandingPage();
 }
 
 function showToko() {
@@ -27,17 +38,24 @@ function showToko() {
     hideCart();
     createTokoItem(dataObat);
     hideBarcode();
+    hideLandingPage();
 }
 
 function showBarcode() {
     document.getElementById('barcode').classList.remove('hidden')
+    hideLandingPage();
 }
 
 function hideBarcode() {
     document.getElementById('barcode').classList.add('hidden')
+    hideLandingPage();
 }
 
 // Hidden Function
+
+function hideLandingPage() {
+    document.getElementById('landing-page').classList.add('hidden')
+}
 
 function hideMain() {
     document.getElementById('homepage').classList.add('hidden')
