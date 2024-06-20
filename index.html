@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include Tailwind CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/search.css">
+
+</head>
+
+<body>
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                            alt="Your Company">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#" onclick="showMain()"
+                                class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
+                            <a href="#"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang Kami</a>
+                            <a href="#"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Toko</a>
+                            <a href="#"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <span class="absolute -inset-1.5"></span>
+                        <span class="sr-only">View notifications</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                        </svg>
+                      </button>
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+                            <button type="button" onclick="menuButton()"
+                                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <span class="absolute -inset-1.5"></span>
+                                <span class="sr-only">Open user menu</span>
+                                <img class="h-8 w-8 rounded-full"
+                                    src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg"
+                                    alt="">
+                            </button>
+                        </div>
+
+                        <div id="menu-button" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                            <!-- Active: "bg-gray-100", Not Active: "" -->
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                id="user-menu-item-0">Your Profile</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                id="user-menu-item-1">Settings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                id="user-menu-item-2">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <main style="margin-bottom: 200px;">
+        <div id="homepage" class="flex justify-center w-full pt-6 px-5 gap-5">
+
+            <!-- Fitur Gejala -->
+            <div class="border shadow rounded-lg w-1/2">
+                <div class="">
+                    <p class="text-center px-3 py-3 rounded-md">Pilih Gejala</p>
+                </div>
+
+                <div class="mx-5">
+                    <div class="space-y-2" id="checkboxContainer">
+                        <!-- Checkboxes will be dynamically added here -->
+                    </div>
+                </div>
+
+                <div class="flex justify-end">
+                    <button class="mr-4 mb-2"
+                        onclick="checkBoxResult()">submit</button>
+                </div>
+            </div>
+
+            <!-- Fitur Cari Barang -->
+            <div class="border shadow rounded-lg w-1/2 flex justify-center">
+                <!-- Search Bar -->
+                <div class="place-content-center">
+                    <div class="Card border">
+                        <div class="CardInner">
+                            <label class="Search-label" style="color: black;">Search to your Medicine</label>
+                            <div class="Search-container">
+                                <div class="Icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-search">
+                                        <circle cx="11" cy="11" r="8" />
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                    </svg>
+                                </div>
+                                <div class="SearchInputContainer">
+                                    <input class="SearchInput" placeholder="bodrex?" onkeydown="search(this)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fitur penampilan hasil dari gejala -->
+        <div id="hasilGejala" class="flex justify-center w-full pt-6 px-5 gap-5 hidden">
+            <div id="hasilCheckbox">
+                <!-- checked box will generate here -->
+            </div>
+        </div>
+
+        <!-- Fitur Penampilan hasil dari search -->
+        <div id="hasilSearch" class="flex justify-center w-full pt-6 px-5 gap-5 hidden">
+            <!-- Search Result will generated Here -->
+        </div>
+
+    </main>
+
+    <!-- External JavaScript for dynamic checkbox generation -->
+    <script src="./data/obatData.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/component/search/search.js"></script>
+    <script src="js/component/navbar/navbar.js"></script>
+    <script src="js/component/checkbox/checkbox.js"></script>
+    <script src="js/component/checkbox/checkboxHasil.js"></script>
+    <script src="js/component/search/searchResult.js"></script>
+</body>
+
+</html>
