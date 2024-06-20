@@ -26,6 +26,36 @@ function createCheckboxes(data) {
     });
 }
 
+
+
+function getFormData(data) {
+    const idSet = new Set();
+    const result = [];
+
+    for (let disease in data) {
+        data[disease].forEach(symptom => {
+            const id = symptom; // Assuming symptom is a string (based on your current implementation)
+            
+            // Check if id is not already in the Set
+            if (!idSet.has(id)) {
+                idSet.add(id); // Add id to the Set to mark it as seen
+                result.push({ id: id, label: symptom });
+            }
+        });
+    }
+
+    result.sort((a, b) => {
+        if (a.id < b.id) return -1;
+        if (a.id > b.id) return 1;
+        return 0;
+    });
+
+    return result;
+}
+
+// prepare data for pilih gejala display
+const checkboxData = getFormData(db_penyakit);
+
 // Call function to create checkboxes when the page loads
 document.addEventListener("DOMContentLoaded", createCheckboxes(checkboxData));
 
