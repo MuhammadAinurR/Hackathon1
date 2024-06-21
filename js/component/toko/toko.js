@@ -53,6 +53,7 @@ function createTokoItem(data) {
   
       // Add click event listener to "Add to Cart" button
       addToCartButton.addEventListener('click', () => {
+        alert('item berhasil ditambahkan');
         const newItem = {
           gambarLink: item.gambarLink, // Initial quantity
           nama: item.nama,
