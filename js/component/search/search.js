@@ -1,9 +1,9 @@
 function filterData(input, db) {
     const result = [];
     for (item of db) {
-        if (item.nama === input) result.push(item)
+        if (item.nama.toLowerCase() === input.toLowerCase()) result.push(item)
         for (gejala of item.gejala){
-            if (input === gejala) result.push(item)
+            if (input.toLowerCase() === gejala.toLowerCase()) result.push(item)
         }
     }
     return result;
