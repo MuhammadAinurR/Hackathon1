@@ -18,9 +18,7 @@
             <div class="relative flex h-16 items-center justify-between">
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex flex-shrink-0 items-center">
-                        <img class="h-9 w-auto"
-                            src="./img/main_logo.png"
-                            alt="Main Logo">
+                        <img onclick="showLandingPage()" class="h-9 w-auto cursor-pointer" src="./img/main_logo.png" alt="Main Logo">
                     </div>
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
@@ -55,8 +53,7 @@
                 <section class="cover bg-blue-teal-gradient relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 overflow-hidden py-48 flex
                     items-center min-h-screen">
                     <div class="w-full h-full absolute top-0 left-0 z-0">
-                        <img src="./img/main_background.png"
-                            alt="" class="w-full h-full object-cover opacity-20">
+                        <img src="./img/main_background.png" alt="" class="w-full h-full object-cover opacity-20">
                     </div>
 
                     <div class="lg:w-3/4 xl:w-2/4 relative z-10 h-100 lg:mt-16">
@@ -65,9 +62,9 @@
                                 baik dimulai dari merawat diri kita sendiri</h1>
                             <p class="text-blue-100 text-xl md:text-2xl leading-snug mt-4">Selamat datang di Obatpedia,
                                 kami ada untuk keselamatan kita bersama.</p>
-                            <a onclick="showMain(), hideToko()" href="#"
-                                class="px-8 py-4 bg-teal-500 text-white rounded inline-block mt-8 font-semibold">Ada
-                                keluhan kesehatan?</a>
+                            <button onclick="showMain(), hideToko()" href="#"
+                                class="px-8 py-4 bg-teal-500 text-blue-900 rounded inline-block mt-8 font-semibold bg-blue-200 hover:bg-gray-700 hover:text-white">Ada
+                                keluhan kesehatan?</button>
                         </div>
                     </div>
                 </section>
@@ -111,22 +108,34 @@
                 </div>
 
                 <div class="flex justify-center gap-6 mt-40">
-                    <div class="w-1/3 bg-white rounded-lg border border-gray-300 p-8">
-                        <img src="./img/logo_diagnosis.png"
-                            alt="" class="h-20 mx-auto">
+                    <div class="w-1/3 bg-white rounded-lg border border-gray-300 p-8 grid place-content-between">
+                        <div class="grid place-content-center">
+                            <img src="./img/logo_diagnosis.png" alt="" class="h-20 mx-auto">
 
-                        <h4 class="text-xl font-bold mt-4">Diagnosis yang dapat diandalkan</h4>
-                        <p class="mt-1">Tampilkan pilihan obat berdasarkan gejala.</p>
-                        <a onclick="showMain(), hideToko()" href="#" class="block mt-7 text-right">Coba Sekarang</a>
+                            <h4 class="text-xl font-bold mt-10">Diagnosis yang dapat diandalkan</h4>
+                            <p class="mt-1">Tampilkan pilihan obat berdasarkan gejala.</p>
+                        </div>
+                        <div class="flex">
+                            <div class="w-1/2 flex justify-center"></div>
+                            <a onclick="showMain(), hideToko()" href="#"
+                                class="text-center w-1/2 px-2 py-2 text-white rounded inline-block mt-8 font-semibold bg-blue-500 hover:bg-gray-700">Coba
+                                Sekarang</a>
+                        </div>
                     </div>
 
-                    <div class="w-1/3 bg-white rounded-lg border border-gray-300 p-8">
-                        <img src="./img/logo_obat.png"
-                            alt="" class="h-20 mx-auto">
+                    <div class="w-1/3 bg-white rounded-lg border border-gray-300 p-8 grid place-content-between">
+                        <div class="grid place-content-center">
+                            <img src="./img/logo_obat.png" alt="" class="h-20 mx-auto">
 
-                        <h4 class="text-xl font-bold mt-4">Toko Obat Terlengkap</h4>
-                        <p class="mt-1">Toko paling lengkap dan terpercaya di seluruh Indonesia.</p>
-                        <a onclick="showToko()" href="#" class="block mt-1 text-right">Coba Sekarang</a>
+                            <h4 class="text-xl font-bold mt-10">Toko Obat Terlengkap</h4>
+                            <p class="mt-1">Toko paling lengkap dan terpercaya di seluruh Indonesia.</p>
+                        </div>
+                        <div class="flex">
+                            <div class="w-1/2 flex justify-center"></div>
+                            <a onclick="showToko()" href="#"
+                                class="text-center w-1/2 px-2 py-2 text-white rounded inline-block mt-8 font-semibold bg-blue-500 hover:bg-gray-700">Coba
+                                Sekarang</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -145,9 +154,7 @@
 
                 <div class="w-full md:max-w-md md:mx-auto lg:w-1/2 lg:px-8 mt-12 mt:md-0">
                     <div class="bg-gray-400 w-full h-72 rounded-lg">
-                        <img class="w-full h-full rounded-lg"
-                            src="./img/paket.jpg"
-                            alt="">
+                        <img class="w-full h-full rounded-lg" src="./img/paket.jpg" alt="">
                     </div>
 
                     <p class="italic text-sm mt-3 text-center">Dari kita untuk kita</p>
@@ -199,7 +206,7 @@
             <div class="w-4/5">
                 <div class="flex justify-between mb-3">
                     <h1 class="text-3xl font-bold w-1/2 mt-2">Store</h1>
-    
+
                     <!-- Fitur Cari Barang -->
                     <div class="w-1/4">
                         <div class="Search-container">
@@ -216,12 +223,12 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
-    
+
                 <div class="my-10">
                     <div id="etalaseToko" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-    
+
                     </div>
                 </div>
             </div>
@@ -236,7 +243,8 @@
                     <div class="flex justify-between">
                         <h1 class="text-2xl font-bold mb-6 w-1/2">Shopping Cart</h1>
                         <div class="w-1/2 flex justify-end">
-                            <button onclick="resetCart()" class="text-sm mb-5" style="color: #C40A35;">Reset Cart</button>
+                            <button onclick="resetCart()" class="text-sm mb-5" style="color: #C40A35;">Reset
+                                Cart</button>
                         </div>
                     </div>
                     <div class="mb-4 w-full">
@@ -258,11 +266,14 @@
 
             <div id="barcode" class="w-auto px-3 py-3 border shadow-lg hidden">
                 <h1 class="text-2xl font-bold mb-6 text-center">Barcode Pembayaran</h1>
-                <img style="height: 300px;" src="https://www.drupal.org/files/project-images/drupal-project-barcodes.png" alt="">
+                <img style="height: 300px;"
+                    src="https://www.drupal.org/files/project-images/drupal-project-barcodes.png" alt="">
             </div>
             <div id="barcode2" class="w-auto px-3 py-3 border shadow-lg hidden">
                 <h1 class="text-2xl font-bold mb-6 text-center">Barcode Pembayaran</h1>
-                <img style="height: 300px;" src="https://i0.wp.com/barcodesindonesia.com/wp-content/uploads/sites/122/2013/11/V-Card.jpg?fit=1026%2C1026&ssl=1" alt="">
+                <img style="height: 300px;"
+                    src="https://i0.wp.com/barcodesindonesia.com/wp-content/uploads/sites/122/2013/11/V-Card.jpg?fit=1026%2C1026&ssl=1"
+                    alt="">
             </div>
 
 
